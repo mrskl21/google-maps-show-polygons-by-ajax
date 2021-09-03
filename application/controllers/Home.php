@@ -83,4 +83,17 @@ class Home extends CI_Controller {
 
         // echo print_r(compact('reg','witel','sto','device'));
 	}
+
+	public function maps2()
+	{
+		$title = "Load Data From Ajax";
+		$this->load->view('maps_ajax', compact('title'));
+
+	}
+
+	public function get_data()
+	{
+		$data = $this->table_street_lights->all();
+		echo json_encode($data);
+	}
 }
