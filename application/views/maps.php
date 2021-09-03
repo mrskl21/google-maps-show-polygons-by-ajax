@@ -8,7 +8,7 @@
     <?php $this->load->view('partial/navbar');?>
     
     <div class="container">
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-12">
                 <h5 class="title mt-5">Maps</h5>
                 <p class="subtitle mb-2 text-muted">Zoom to reveal the markers</p>

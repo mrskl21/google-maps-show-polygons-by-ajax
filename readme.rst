@@ -1,70 +1,41 @@
-###################
-What is CodeIgniter
-###################
+## About The Project
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+The problem was to many markers on map, so we have to make condition to show/hide based on zoom in google maps.
 
-*******************
-Release Information
-*******************
+### Built With
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Codeigniter](https://codeigniter.com)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* [Google Maps API](https://developers.google.com/maps)
+* [PhpSpreadsheet](https://phpspreadsheet.readthedocs.io/)
 
-**************************
-Changelog and New Features
-**************************
+<!-- GETTING STARTED -->
+## Getting Started
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-*******************
-Server Requirements
-*******************
+### Prerequisites
 
-PHP version 5.6 or newer is recommended.
+This is an example of how to list things you need to use the software and how to install them.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+### Installation
 
-************
-Installation
-************
+1. Clone the repo
+   ```sh
+   git clone https://github.com/mrskl21/google-maps-marker-on-specific-zoom.git
+   ```
+2. Install dependency
+   ```sh
+   composer update
+   ```
+3. Import database using sql file in `database/gmaps.sql`
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+4. Rename `aplication/config/database.php.example` to `aplication/config/database.php` and update the configuration on line 79-81
 
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+5. Enter your Google-API-key in `aplication/view/maps.php` on line 140
+   ```html
+   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
+   ```
