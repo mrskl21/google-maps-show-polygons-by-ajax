@@ -137,7 +137,8 @@
         }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk7maZZbWS4I3odR82HiAUoJDuGbzi-iw&callback=myMap"></script>
 
     <?php $this->load->view('partial/footer');?>
     
