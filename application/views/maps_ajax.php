@@ -11,7 +11,7 @@
         <div class="row mb-5">
             <div class="col-12">
                 <div class="float-right mt-5">
-                    <button class="btn btn-outline-danger" style="display: block;" id="offbutton">Marker OFF</button>
+                    <button class="btn btn-outline-dark" style="display: block;" id="offbutton">Marker OFF</button>
                     <button class="btn btn-danger" style="display: none;" id="onbutton">Marker ON</button>
                 </div>
                 <h5 class="title mt-5">Maps</h5>
@@ -21,6 +21,7 @@
             </div>
         </div>
     </div>
+
     <?php $this->load->view('partial/footer');?>
     
     <script>
@@ -51,17 +52,17 @@
                     dataType: "JSON",
                     beforeSend :function () {
                         swal({
-                                title: 'Waiting',
-                                content: 'Processing data',
+                            title: 'Waiting',
+                            content: 'Processing data',
+                            allowOutsideClick: false,
                             onOpen: () => {
-                            swal.showLoading()
+                                swal.showLoading()
                             }
                         })      
                     },
                     success: function(points)
                     {
                         // console.log(points)
-                    
                         for (i = 0; i < points.length; i++) {  
                             marker = new google.maps.Marker({
                                 position: new google.maps.LatLng(points[i].lat, points[i].lng),
@@ -94,6 +95,9 @@
                             }
                         });
 
+                        
+                        $('[id="offbutton"]').hide();
+                        $('[id="onbutton"]').show();
                         swal({
                             title: 'All Marker is ON',
                             text: 'Zoom to show!',
@@ -101,14 +105,16 @@
                             buttons: false,
                             timer: 3000,
                         });
-                        $('[id="offbutton"]').hide();
-                        $('[id="onbutton"]').show();
-
                         
                     },
                     error: function (jqXHR, textStatus, errorThrown)
                     {
-                        alert('Error get data from ajax');
+                        swal({
+                            title: 'Error',
+                            text: 'Error get data from ajax!',
+                            icon: 'error',
+                            buttons: false
+                        });
                     }
                 });
             });
