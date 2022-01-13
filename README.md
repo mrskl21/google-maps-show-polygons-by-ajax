@@ -1,6 +1,6 @@
 ## About The Project
 
-The problem was to many markers on map, so we have to make condition to show/hide based on zoom in google maps.
+The problem was to many markers on map, so we have to make condition to show/hide triggered by button in google maps.
 
 ### Built With
 
@@ -27,7 +27,7 @@ This is an example of how to list things you need to use the software and how to
    git clone https://github.com/mrskl21/google-maps-show-polygons-by-ajax.git
    ```
 
-2. Import database using sql file in `database/gmaps.sql`
+2. Import database using sql file in `database/msc_lingkungan.sql`
 
 3. Rename `aplication/config/database.php.example` to `aplication/config/database.php` and update the configuration on line 79-81
 
