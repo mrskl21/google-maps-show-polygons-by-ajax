@@ -9,7 +9,6 @@ This section should list any major frameworks that you built your project using.
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 * [Google Maps API](https://developers.google.com/maps)
-* [PhpSpreadsheet](https://phpspreadsheet.readthedocs.io/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -25,17 +24,14 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/mrskl21/google-maps-marker-on-specific-zoom.git
+   git clone https://github.com/mrskl21/google-maps-show-polygons-by-ajax.git
    ```
-2. Install dependency
-   ```sh
-   composer update
-   ```
-3. Import database using sql file in `database/gmaps.sql`
 
-4. Rename `aplication/config/database.php.example` to `aplication/config/database.php` and update the configuration on line 79-81
+2. Import database using sql file in `database/gmaps.sql`
 
-5. Enter your Google-API-key in `aplication/view/maps.php` on line 140
+3. Rename `aplication/config/database.php.example` to `aplication/config/database.php` and update the configuration on line 79-81
+
+4. Enter your Google-API-key in `aplication/view/maps.php` on line 140
    ```html
    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap"></script>
    ```

@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Table_street_lights extends CI_Model
+class Table_location extends CI_Model
 {
-    private $table="street_lights";
+    private $table="location";
 
     public function __construct()
     {
